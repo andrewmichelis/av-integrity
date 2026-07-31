@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "AV Sensor-Integrity Monitor (simulation)"
+abstract: >-
+  An open, simulation-only sensor-fusion and fault-integrity study for an
+  automated vehicle: how a system knows when it can't trust its own sensors and
+  fails safe instead of failing. Milestone M0 delivers the sensor-fusion
+  foundation (an Extended Kalman Filter fusing GPS, IMU, and wheel speed) with
+  the estimate tracking ground truth under nominal conditions.
+type: software
+authors:
+  - family-names: Michelis
+    given-names: Andrew P.
+    email: andrew.michelis@knackmentor.com
+    affiliation: KnackMentor
+version: "0.1.0"
+date-released: "2026-07-15"
+license: Apache-2.0
+repository-code: "https://github.com/andrewmichelis/av-integrity"
+url: "https://knackmentor.com"
+keywords:
+  - sensor fusion
+  - Kalman filter
+  - state estimation
+  - fault detection
+  - autonomous vehicles
+  - simulation
+  - systems integration

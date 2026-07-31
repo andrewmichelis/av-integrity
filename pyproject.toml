@@ -1,0 +1,40 @@
+[project]
+name = "av-integrity"
+version = "0.1.0"
+description = "Open, simulation-only sensor-fusion + fault-integrity monitor for an automated vehicle."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Andrew Michelis", email = "andrew@knackmentor.com" }]
+keywords = [
+    "sensor-fusion",
+    "kalman-filter",
+    "state-estimation",
+    "fault-detection",
+    "autonomous-vehicles",
+    "simulation",
+    "systems-integration",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = ["numpy>=1.24", "matplotlib>=3.6"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://knackmentor.com"
+Repository = "https://github.com/andrewmichelis/av-integrity"
+"Build log" = "https://knackmentor.com/blog/building-a-sensor-fusion-testbed.html"
+
+[tool.setuptools.packages.find]
+include = ["av_integrity*"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"

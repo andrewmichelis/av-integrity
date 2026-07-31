@@ -1,0 +1,11 @@
+AV Sensor-Integrity Monitor (simulation)
+Copyright 2026 Andrew P. Michelis
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+It is developed and narrated in public at https://knackmentor.com.
+
+The methods implemented here (Kalman / Extended Kalman filtering) are standard,
+well-established algorithms and are attributed to their original sources in
+docs/references.md. This project's contribution is their integration into an
+honest, testable whole, not the methods themselves.
