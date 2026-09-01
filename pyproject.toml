@@ -1,11 +1,11 @@
 [project]
 name = "av-integrity"
-version = "0.1.0"
+version = "0.2.0"
 description = "Open, simulation-only sensor-fusion + fault-integrity monitor for an automated vehicle."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "Apache-2.0" }
-authors = [{ name = "Andrew Michelis", email = "andrew@knackmentor.com" }]
+authors = [{ name = "Andrew P. Michelis", email = "andrew.michelis@knackmentor.com" }]
 keywords = [
     "sensor-fusion",
     "kalman-filter",
@@ -32,7 +32,11 @@ Homepage = "https://knackmentor.com"
 Repository = "https://github.com/andrewmichelis/av-integrity"
 "Build log" = "https://knackmentor.com/blog/building-a-sensor-fusion-testbed.html"
 
+[tool.pytest.ini_options]
+pythonpath = ["src"]   # src-layout: tests import `av_integrity` without an install (replaces the root conftest.py)
+
 [tool.setuptools.packages.find]
+where = ["src"]
 include = ["av_integrity*"]
 
 [build-system]

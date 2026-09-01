@@ -1,28 +1,55 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: "If you use this software, please cite it using these metadata."
 title: "AV Sensor-Integrity Monitor (simulation)"
 abstract: >-
-  An open, simulation-only sensor-fusion and fault-integrity study for an
-  automated vehicle: how a system knows when it can't trust its own sensors and
-  fails safe instead of failing. Milestone M0 delivers the sensor-fusion
-  foundation (an Extended Kalman Filter fusing GPS, IMU, and wheel speed) with
-  the estimate tracking ground truth under nominal conditions.
+  An open, simulation-only study of sensor-fusion integrity for an automated
+  vehicle: fusing GPS, IMU, and wheel-speed with an Extended Kalman Filter, and
+  detecting when a sensor cannot be trusted. Milestones M0–M1 deliver the
+  sensor-fusion foundation and the first integrity check (a normalized-innovation
+  consistency test that flags and gates an untrustworthy reading).
 type: software
 authors:
   - family-names: Michelis
     given-names: Andrew P.
     email: andrew.michelis@knackmentor.com
     affiliation: KnackMentor
-version: "0.1.0"
-date-released: "2026-07-15"
+version: "0.2.0"
+date-released: "2026-08-31"
 license: Apache-2.0
 repository-code: "https://github.com/andrewmichelis/av-integrity"
 url: "https://knackmentor.com"
 keywords:
   - sensor fusion
-  - Kalman filter
-  - state estimation
-  - fault detection
+  - extended kalman filter
+  - innovation monitoring
+  - integrity monitoring
   - autonomous vehicles
   - simulation
   - systems integration
+references:
+  - type: article
+    authors:
+      - family-names: Kalman
+        given-names: "R. E."
+    title: "A New Approach to Linear Filtering and Prediction Problems"
+    journal: "Journal of Basic Engineering"
+    year: 1960
+  - type: book
+    authors:
+      - family-names: Bar-Shalom
+        given-names: Yaakov
+      - family-names: Li
+        given-names: "X.-R."
+      - family-names: Kirubarajan
+        given-names: Thiagalingam
+    title: "Estimation with Applications to Tracking and Navigation"
+    year: 2001
+  - type: article
+    authors:
+      - family-names: Mehra
+        given-names: "R. K."
+      - family-names: Peschon
+        given-names: J.
+    title: "An innovations approach to fault detection and diagnosis in dynamic systems"
+    journal: "Automatica"
+    year: 1971

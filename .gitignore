@@ -2,6 +2,5 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
-out/
-*.mdesk
-.mdesk
+*.egg-info/
+/.sandbox/
