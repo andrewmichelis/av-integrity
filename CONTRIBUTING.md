@@ -22,7 +22,7 @@ welcome, within a few boundaries.
 
 1. Open an issue describing the change (a bug, a scenario, a doc improvement) before a large PR, so
    the approach can be agreed first.
-2. Keep the tree green: `pip install -e .`, then `pytest -q` (the suite covers M0–M5). Add a test for
+2. Keep the tree green: `pip install -e .`, then `pytest -q` (the suite covers M0–M1). Add a test for
    any behaviour you change or fix.
 3. Match the surrounding style; every file is written to be read (comments explain *why*, not just
    *what*).

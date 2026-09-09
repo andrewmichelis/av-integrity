@@ -25,3 +25,5 @@ in the normal way, and the report is credited unless you prefer to stay anonymou
 
 Only the latest released version is supported. Please reproduce any report against the current state
 of the released repository before filing.
+
+See also "Verifying a release" in the [README](README.md) for provenance and release-authenticity.

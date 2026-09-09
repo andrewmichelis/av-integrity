@@ -1,5 +1,10 @@
 # AV Sensor-Integrity Monitor (simulation)
 
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+![Version](https://img.shields.io/badge/version-0.2.0-informational.svg)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)
+![Scope: simulation only](https://img.shields.io/badge/scope-simulation--only-orange.svg)
+
 An open, **simulation-only** study of a hard problem in autonomy: **how a system knows when it can't trust its own sensors, and fails safe instead of failing.**
 
 An automated vehicle fuses several noisy sensors into one estimate of its own state and then acts on that estimate. When a sensor degrades or lies (a GPS fix that jumps, an IMU that drifts, a wheel that slips), two questions decide whether the system is safe: does it notice, and does it degrade safely? This project builds an answer, one honest increment at a time, and puts the reasoning in the open.
@@ -7,6 +12,8 @@ An automated vehicle fuses several noisy sensors into one estimate of its own st
 It is built and narrated in public at **[knackmentor.com](https://knackmentor.com)** by Andrew Michelis (systems integration & technical delivery).
 
 > **Build logs** live on the [KnackMentor blog](https://knackmentor.com/blog/) — one write-up per milestone.
+
+![Under an injected 8 m GPS jump the gated estimate stays on the true trajectory while the ungated one follows the spoof; the GPS surprise score (NIS) spikes above threshold exactly during the fault window.](docs/img/m1-gps-jump.png)
 
 ## Honest boundary
 
@@ -76,6 +83,20 @@ Each milestone ships with a build log on the [KnackMentor blog](https://knackmen
 ## References and citation
 
 The methods used here (Kalman / Extended Kalman filtering for the fusion, the innovation / NIS consistency test for the integrity check) are standard, and are cited to their sources in [`docs/REFERENCE_references.md`](docs/REFERENCE_references.md). The contribution of this project is the integration and the honest evaluation, not the algorithms. To cite the project itself, see [`CITATION.cff`](CITATION.cff) (GitHub renders a "Cite this repository" button from it).
+
+## Related tools
+
+Part of a small suite of open tools by [Andrew Michelis](https://knackmentor.com). See them all at **[knackmentor.com/work](https://knackmentor.com/work/)**.
+
+- **[WebClip](https://github.com/andrewmichelis/webclip)**: save any web page exactly as you saw it (a pixel-faithful page-to-PDF Chrome extension).
+- **[Markdown Desk](https://github.com/andrewmichelis/markdown-desk)**: a single-file browser app for reading and working with Markdown.
+- **[HashTag Language](https://github.com/andrewmichelis/hashtag-lang)**: a small notation for facts, queries, and provenance (the shared substrate these tools speak).
+
+<sub>Built in the open, verified before shipping. The standard behind [KnackMentor](https://knackmentor.com).</sub>
+
+## Verifying a release
+
+Every release is tagged and signed under the author's key, and the full source is public here, so you can build from source and compare. Authorship and first-conception are independently timestamped (RFC-3161 / OpenTimestamps) as part of the author's provenance process. Release-artifact attestation via [Sigstore](https://www.sigstore.dev/) is planned. Any certification or curation offered on top stays opt-in, self-hosting is always allowed, and there is no certificate authority you are required to trust.
 
 ## License
 
