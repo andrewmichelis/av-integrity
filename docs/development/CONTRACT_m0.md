@@ -1,6 +1,6 @@
 # M0 — Fusing the sensors so the estimate tracks the truth
 
-> **Components:** C1 world-simulator · C2 sensor-models · C3 EKF fusion-estimator. **Established methods (selected + wired, not invented):** 2D kinematics · Gaussian sensor models · Extended Kalman Filter. **Reproduce:** `python scripts/run_demo.py`.
+> **Established methods (selected + wired, not invented):** 2D kinematics · Gaussian sensor models · Extended Kalman Filter. **Reproduce:** `python -m av_integrity report`.
 
 ## What we set out to do
 Stand up the whole spine end to end before adding any fault detection: a
@@ -21,7 +21,7 @@ of the vehicle's state, and show that the guess tracks the real trajectory.
 ## The result
 On the clean drive, the fused estimate tracks ground truth closely:
 position within about **0.3 m**, heading within **0.03 rad**, speed within
-**0.09 m/s**. Run `python scripts/run_demo.py` to reproduce it and see the plot.
+**0.09 m/s**. Run `python -m av_integrity figures` to reproduce it and see the plot.
 
 ![The fused estimate (dashed) sits on top of the true trajectory and speed (solid) on a clean drive.](../img/m0-nominal.png)
 

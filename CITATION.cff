@@ -13,8 +13,8 @@ authors:
     given-names: Andrew P.
     email: andrew.michelis@knackmentor.com
     affiliation: KnackMentor
-version: "0.2.0"
-date-released: "2026-08-31"
+version: "0.6.0"
+date-released: "2026-09-15"
 license: Apache-2.0
 repository-code: "https://github.com/andrewmichelis/av-integrity"
 url: "https://knackmentor.com"

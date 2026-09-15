@@ -1,6 +1,6 @@
 [project]
 name = "av-integrity"
-version = "0.2.0"
+version = "0.6.0"
 description = "Open, simulation-only sensor-fusion + fault-integrity monitor for an automated vehicle."
 readme = "README.md"
 requires-python = ">=3.10"

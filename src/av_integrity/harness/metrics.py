@@ -52,7 +52,29 @@ def detection_report(result, window, sensor="gps"):
     }
 
 
+def safety_states_in(result, window):
+    """The set of safe-states the monitor was in during [start, end) seconds."""
+    start, end = window
+    return {state for (t, state, _) in result["safety"] if start <= t < end}
+
+
+def isolated_sensors_in(result, window):
+    """Which sensors were flagged (isolated) during [start, end) seconds."""
+    start, end = window
+    isolated = set()
+    for (t, _, flagged) in result["safety"]:
+        if start <= t < end:
+            isolated.update(flagged)
+    return isolated
+
+
 def first_flag_time(result, sensor):
     """When the instantaneous (NIS) check first flagged `sensor`, or None."""
     ts = [t for (t, s) in result["flags"] if s == sensor]
+    return min(ts) if ts else None
+
+
+def first_drift_time(result, sensor):
+    """When the drift monitor first confirmed a drift on `sensor`, or None."""
+    ts = [t for (t, s, _score, flagged) in result["drift"] if s == sensor and flagged]
     return min(ts) if ts else None

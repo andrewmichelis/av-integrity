@@ -1,6 +1,6 @@
 # M1 — Catching a GPS that lies
 
-> **Component:** C4 integrity-monitor (the instant check). **Established method (selected + wired):** normalized-innovation consistency test. **Reproduce:** `python scripts/run_m1.py`.
+> **Established method (selected + wired):** normalized-innovation consistency test. **Reproduce:** `python -m av_integrity report`.
 
 ## The problem
 In M0 the filter trusts every reading. So if the GPS suddenly jumps by several
@@ -34,7 +34,7 @@ On an 8-metre GPS jump lasting 8 seconds:
 
 ![Under a GPS jump: the gated estimate stays on truth while the ungated one follows the spoof; the GPS surprise score (NIS) spikes above the threshold exactly during the fault window.](../img/m1-gps-jump.png)
 
-Run `python scripts/run_m1.py` to reproduce it. The plot shows the NIS sitting low, then
+Run `python -m av_integrity figures` to reproduce it. The plot shows the NIS sitting low, then
 spiking above the threshold exactly during the fault window.
 
 ## Honest limits
